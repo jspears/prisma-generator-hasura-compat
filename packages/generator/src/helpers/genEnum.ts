@@ -5,17 +5,17 @@ import { print,Kind } from 'graphql';
 type EnumType = DMMF.DatamodelEnum;
 type EnumValue = DMMF.EnumValue;
 
+
 export function generateAllEnums(enums:EnumType[]):DocumentNode{
 
-  const definitions:DefinitionNode[] = enums.map(({ name, values }) =>({
+  const definitions:DefinitionNode[] = enums.map(({ name,dbName, values }) =>({
     kind: Kind.ENUM_TYPE_DEFINITION,
-    name: { kind: Kind.NAME, value: name },
+    name: { kind: Kind.NAME, value:  dbName ?? name },
     values: values.map(v=>({
       kind: Kind.ENUM_VALUE_DEFINITION,
-      name: { kind: Kind.NAME, value: v.name },
-      values,
-    })),
-  }));
+      name: { kind: Kind.NAME, value: v.dbName ??v.name },
+    }))
+  }) )
 
   return {
     kind: Kind.DOCUMENT,

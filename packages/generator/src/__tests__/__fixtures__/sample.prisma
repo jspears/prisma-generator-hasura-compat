@@ -10,13 +10,15 @@ model User {
 }
 
 enum NotificationType {
-  newPosts
-  newComments
+  newPosts       @map("new_posts")
+  newComments    @map("new_comments")
   newFollowers
   reply
   heartOnPost
   heartOnComment
   heartOnReply
+
+  @@map("notification_type")
 }
 
 enum Language {
