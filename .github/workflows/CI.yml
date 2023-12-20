@@ -37,7 +37,6 @@ jobs:
 #        working-directory: ./packages/generator
 #        run: yarn run test
   Publish:
-    runs-on: ${{ matrix.os }}
 #    needs:
 #      - Test
     if: ${{ github.ref == 'refs/heads/main' }}
