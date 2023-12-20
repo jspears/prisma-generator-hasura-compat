@@ -3,6 +3,10 @@ on:
   release:
     types: [published]
 jobs:
+  permissions:
+    contents: write
+    deployments: write
+    packages: write
   build:
     runs-on: ubuntu-latest
     steps:
