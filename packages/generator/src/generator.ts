@@ -1,5 +1,5 @@
 import { generatorHandler, GeneratorOptions } from '@prisma/generator-helper'
-import { logger } from '@prisma/sdk'
+import { logger } from '@prisma/internals'
 import { GENERATOR_NAME } from './constants'
 import { printAllEnums } from './helpers/genEnum'
 import { writeFileSafely } from './utils/writeFileSafely'
