@@ -21,7 +21,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@prisma/client": "5.2.0",
+    "@prisma/client": "5.7.1",
     "@prisma/generator-helper": "5.2.0",
     "@prisma/internals": "5.2.0",
     "graphql": "^16.8.1"
