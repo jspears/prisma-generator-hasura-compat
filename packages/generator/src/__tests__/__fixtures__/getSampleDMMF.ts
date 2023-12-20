@@ -1,9 +1,9 @@
 import { getDMMF, getSchema } from '@prisma/internals'
-import path from 'path'
+import {join} from 'path'
 
 
 export const getSampleDMMF = async () => {
   return getDMMF({
-    datamodel: await getSchema(path.join(__dirname, './sample.prisma')),
+    datamodel: await getSchema(join(__dirname, './sample.prisma')),
   })
 }
