@@ -9,6 +9,10 @@
     "node": ">=14.0",
     "yarn": "3.6.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jspears/prisma-generator-hasura-compat.git"
+  },
   "scripts": {
     "start": "node dist/bin.js",
     "dev": "npx tsc -w",
