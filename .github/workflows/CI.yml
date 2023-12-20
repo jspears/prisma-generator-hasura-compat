@@ -32,6 +32,7 @@ jobs:
 #        working-directory: ./packages/generator
 #        run: yarn run test
   Publish:
+    runs-on: ${{ matrix.os }}
     permissions:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
