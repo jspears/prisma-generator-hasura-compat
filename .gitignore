@@ -3,5 +3,11 @@ node_modules
 yarn-error.log
 build
 pnpm-debug.log
-.yarn
 .env*
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
