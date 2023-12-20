@@ -51,7 +51,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Publish 🚀
         working-directory: ./packages/generator
-        run: npx semantic-release
+        run: yarn dlx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
